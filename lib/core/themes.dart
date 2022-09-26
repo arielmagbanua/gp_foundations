@@ -31,8 +31,8 @@ final defaultTheme = themeData.copyWith(
     style: ElevatedButton.styleFrom(
       minimumSize: const Size(200, 50),
       maximumSize: const Size(300, 50),
-      primary: primaryColorDark,
-      onPrimary: Colors.white,
+      backgroundColor: primaryColorDark,
+      foregroundColor: Colors.white,
     ),
   ),
   primaryColorDark: primaryColorDark,

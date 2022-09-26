@@ -84,7 +84,8 @@ class DefaultFirebaseOptions {
       projectId: 'gpdavao',
       databaseURL: 'https://gpdavao.firebaseio.com',
       storageBucket: 'gpdavao.appspot.com',
-      iosClientId: '386568347764-k5frm3k7i01aslp9f5skr42lvdqjqjdn.apps.googleusercontent.com',
+      iosClientId:
+          '386568347764-k5frm3k7i01aslp9f5skr42lvdqjqjdn.apps.googleusercontent.com',
       iosBundleId: 'org.growpointchurch.foundations.gpFoundations',
     );
   }

@@ -24,7 +24,7 @@ class User {
     required this.email,
     required this.firstName,
     required this.lastName,
-    this.verified = false
+    this.verified = false,
   });
 
   /// Creates a user from json data structure.

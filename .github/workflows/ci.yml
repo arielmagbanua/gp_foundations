@@ -1,0 +1,44 @@
+name: Flutter CI
+
+# This workflow is triggered on pushes to the repository.
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    # This job will run on ubuntu virtual machine
+    runs-on: ubuntu-latest
+
+    steps:
+      # Setup Java environment in order to build the Android app.
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '16.x'
+
+      # Setup the flutter environment.
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.x'
+          # channel: 'beta' # 'dev', 'alpha', default to: 'stable'
+
+      # setup dart sdk
+      - uses: dart-lang/setup-dart@v1
+
+      # Get flutter dependencies.
+      - run: flutter pub get
+
+      # Statically analyze the Dart code for any errors.
+      - run: flutter analyze .
+
+      # Run widget tests for our flutter project.
+      - run: flutter test
