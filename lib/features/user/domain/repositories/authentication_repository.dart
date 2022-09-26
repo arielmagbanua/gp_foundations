@@ -12,6 +12,13 @@ abstract class AuthenticationRepository {
   /// The current authenticated user.
   User get currentUser;
 
+  /// Signs up a user.
+  ///
+  /// The [firstName] is the first name of the user.
+  /// The [lastName] is the last name of the user.
+  /// The [email] is the email of the user.
+  /// The [gender] is the gender of the user.
+  /// The [verified] indicates if the user is verified or not.
   Future<void> signUp({
     required String firstName,
     required String lastName,
