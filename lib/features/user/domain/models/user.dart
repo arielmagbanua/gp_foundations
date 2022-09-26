@@ -19,12 +19,13 @@ class User {
   /// The [email] is the email of the user.
   /// The [firstName] is the first name of the user.
   /// The [lastName] is the last name of the user.
-  User(
-      {required this.id,
-      required this.email,
-      required this.firstName,
-      required this.lastName,
-      this.verified = false});
+  User({
+    required this.id,
+    required this.email,
+    required this.firstName,
+    required this.lastName,
+    this.verified = false,
+  });
 
   /// Creates a user from json data structure.
   ///
