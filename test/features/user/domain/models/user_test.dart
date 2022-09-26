@@ -11,10 +11,12 @@ void main() {
     expect(user.id, 'id-foo');
     expect(user.firstName, 'John');
     expect(user.lastName, 'Doe');
+    expect(user.gender, 'male');
     expect(user.verified, true);
     expect(userJson['id'], user.id);
     expect(userJson['firstName'], user.firstName);
     expect(userJson['lastName'], user.lastName);
+    expect(userJson['gender'], user.gender);
     expect(userJson['verified'], user.verified);
   });
 }
