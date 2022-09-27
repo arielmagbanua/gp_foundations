@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gp_foundations/features/user/domain/models/user.dart';
+import 'package:gp_foundations/features/user/domain/entities/user.dart';
 
 import '../../../../test_data.dart';
 

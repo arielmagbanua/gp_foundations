@@ -1,4 +1,4 @@
-import '../models/user.dart';
+import '../entities/user.dart';
 
 /// AuthenticationRepository
 ///
