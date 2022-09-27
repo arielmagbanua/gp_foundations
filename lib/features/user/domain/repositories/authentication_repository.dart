@@ -10,7 +10,7 @@ abstract class AuthenticationRepository {
   Stream<User> get user;
 
   /// The current authenticated user.
-  User get currentUser;
+  User? get currentUser;
 
   /// Signs up a user.
   ///
