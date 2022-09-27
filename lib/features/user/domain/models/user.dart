@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -49,4 +50,31 @@ class User extends Equatable {
     gender,
     verified,
   ];
+}
+
+/// Extend or add function for a User.
+extension FirebaseUserExtensions on firebase_auth.User {
+  /// Converts firebase user to User.
+  ///
+  /// The [gender] is the gender of the user.
+  User toUser(String gender) {
+    String firstName = '';
+    String lastName = '';
+
+    if (displayName != null && displayName!.isNotEmpty) {
+      final fullName = displayName!.split(' ');
+
+      firstName = fullName[0];
+      lastName = fullName[1];
+    }
+
+    return User(
+      id: uid,
+      firstName: firstName,
+      lastName: lastName,
+      email: email!,
+      gender: gender,
+      verified: emailVerified,
+    );
+  }
 }
