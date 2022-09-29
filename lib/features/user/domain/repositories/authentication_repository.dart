@@ -7,7 +7,7 @@ import '../entities/user.dart';
 abstract class AuthenticationRepository {
   /// Stream of [User] which will emit the current user when
   /// the authentication state changes.
-  Stream<User> get user;
+  Stream<User?> get user;
 
   /// The current authenticated user.
   User? get currentUser;
@@ -17,12 +17,14 @@ abstract class AuthenticationRepository {
   /// The [firstName] is the first name of the user.
   /// The [lastName] is the last name of the user.
   /// The [email] is the email of the user.
+  /// The [password] is the password provided the user.
   /// The [gender] is the gender of the user.
   /// The [verified] indicates if the user is verified or not.
   Future<void> signUp({
     required String firstName,
     required String lastName,
     required String email,
+    required String password,
     required String gender,
     bool verified = false,
   });
