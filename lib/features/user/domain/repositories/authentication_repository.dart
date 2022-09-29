@@ -31,10 +31,10 @@ abstract class AuthenticationRepository {
   Future<void> sendEmailVerification();
 
   /// Starts the Sign In with Google Flow.
-  Future<void> loginInWithGoogle();
+  Future<void> loginWithGoogle();
 
   /// Signs in with the provided [email] and [password].
-  Future<void> loginInWithEmailAndPassword({
+  Future<void> loginWithEmailAndPassword({
     required String email,
     required String password,
   });
