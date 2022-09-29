@@ -36,14 +36,14 @@ class EmailActionCodeSettings extends ActionCodeSettings with CanGetEnvValues {
     bool? handleCodeInApp,
     String? iOSBundleId,
   }) : super(
-    url: url,
-    androidPackageName: androidPackageName,
-    androidMinimumVersion: androidMinimumVersion,
-    androidInstallApp: androidInstallApp,
-    dynamicLinkDomain: dynamicLinkDomain,
-    handleCodeInApp: handleCodeInApp,
-    iOSBundleId: iOSBundleId,
-  );
+          url: url,
+          androidPackageName: androidPackageName,
+          androidMinimumVersion: androidMinimumVersion,
+          androidInstallApp: androidInstallApp,
+          dynamicLinkDomain: dynamicLinkDomain,
+          handleCodeInApp: handleCodeInApp,
+          iOSBundleId: iOSBundleId,
+        );
 
   /// Creates a copy of the instance with email and minimum version of the app.
   ///
