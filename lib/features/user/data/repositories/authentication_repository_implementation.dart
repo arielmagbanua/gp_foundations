@@ -5,7 +5,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import '../../domain/errors.dart';
 import '../../domain/repositories/authentication_repository.dart';
 import '../../../../core/configs.dart';
-import '../data_sources/user_remote_data_source.dart';
 import '../models/user.dart';
 
 /// AuthenticationRepositoryImplementation
@@ -20,9 +19,6 @@ class AuthenticationRepositoryImplementation
   /// The Email action code settings instance for building action code settings
   /// for user verification and reset password
   final EmailActionCodeSettings emailActionCodeSettings;
-
-  /// The remote data source instance for user.
-  final UserRemoteDataSource userRemoteDataSource;
 
   /// The current user instance
   late User? _currentUSer = null;
