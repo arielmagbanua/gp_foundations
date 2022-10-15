@@ -35,7 +35,6 @@ class AuthenticationRepositoryImplementation
   AuthenticationRepositoryImplementation({
     required this.firebaseAuth,
     required this.emailActionCodeSettings,
-    required this.userRemoteDataSource,
     required this.googleSignIn,
   });
 
