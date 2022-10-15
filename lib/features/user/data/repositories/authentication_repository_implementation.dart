@@ -47,19 +47,6 @@ class AuthenticationRepositoryImplementation
   @override
   User? get currentUser => _currentUSer ?? firebaseAuth.currentUser!.toUser();
 
-  /// Streams the changes of firebase user.
-  @override
-  Stream<User?> get user {
-    return firebaseAuth.userChanges().map((firebaseUser) {
-      if ((_currentUSer != null && firebaseUser != null) &&
-          _currentUSer!.email == firebaseUser.email) {
-        return firebaseUser.toUser(_currentUSer!.gender);
-      }
-
-      return firebaseUser?.toUser();
-    });
-  }
-
   /// Reset the password of the user.
   ///
   /// The [actionCode] is the action code of the reset password deep link.

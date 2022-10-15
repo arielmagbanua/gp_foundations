@@ -5,10 +5,6 @@ import '../entities/user.dart';
 /// It is the contract / interface for abstracting the underlying implementation
 /// of how a user is authenticated as well as how a user is fetched.
 abstract class AuthenticationRepository {
-  /// Stream of [User] which will emit the current user when
-  /// the authentication state changes.
-  Stream<User?> get user;
-
   /// The current authenticated user.
   User? get currentUser;
 
