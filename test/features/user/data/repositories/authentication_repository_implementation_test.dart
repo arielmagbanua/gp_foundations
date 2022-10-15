@@ -4,24 +4,19 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mocktail/mocktail.dart';
 
 import 'package:gp_foundations/core/configs.dart';
-import 'package:gp_foundations/features/user/data/data_sources/user_remote_data_source.dart';
 import 'package:gp_foundations/features/user/data/repositories/authentication_repository_implementation.dart';
 import 'package:gp_foundations/features/user/domain/errors.dart';
 
 class MockFirebaseAuth extends Mock implements firebase_auth.FirebaseAuth {}
 
-class MockUserRemoteDataSource extends Mock implements UserRemoteDataSource {}
-
 class MockGoogleSignIn extends Mock implements GoogleSignIn {}
 
 void main() {
   late MockFirebaseAuth mockFirebaseAuth;
-  late MockUserRemoteDataSource mockUserRemoteDataSource;
   late MockGoogleSignIn mockGoogleSignIn;
 
   setUp(() {
     mockFirebaseAuth = MockFirebaseAuth();
-    mockUserRemoteDataSource = MockUserRemoteDataSource();
     mockGoogleSignIn = MockGoogleSignIn();
   });
 
@@ -32,7 +27,6 @@ void main() {
 
     final authRepositoryImplementation = AuthenticationRepositoryImplementation(
       firebaseAuth: mockFirebaseAuth,
-      userRemoteDataSource: mockUserRemoteDataSource,
       googleSignIn: mockGoogleSignIn,
       emailActionCodeSettings: emailActionCodeSettings,
     );
@@ -63,7 +57,6 @@ void main() {
 
     final authRepositoryImplementation = AuthenticationRepositoryImplementation(
       firebaseAuth: mockFirebaseAuth,
-      userRemoteDataSource: mockUserRemoteDataSource,
       googleSignIn: mockGoogleSignIn,
       emailActionCodeSettings: emailActionCodeSettings,
     );
@@ -93,7 +86,6 @@ void main() {
 
     final authRepositoryImplementation = AuthenticationRepositoryImplementation(
       firebaseAuth: mockFirebaseAuth,
-      userRemoteDataSource: mockUserRemoteDataSource,
       googleSignIn: mockGoogleSignIn,
       emailActionCodeSettings: emailActionCodeSettings,
     );
